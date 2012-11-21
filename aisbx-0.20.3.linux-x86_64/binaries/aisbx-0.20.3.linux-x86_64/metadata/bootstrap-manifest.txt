@@ -1,0 +1,8 @@
+update
+splash.png
+sandbox.png
+config/environment.pth
+uninstall.bat
+config/README.txt
+output/README.txt
+cache/README.txt

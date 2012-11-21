@@ -1,0 +1,1 @@
+This folder stores data created at runtime from the executables, cached here for performance.
