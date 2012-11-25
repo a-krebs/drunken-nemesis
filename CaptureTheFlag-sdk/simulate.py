@@ -35,7 +35,7 @@ def main(PreferedRunner, args, **kwargs):
         if not args:
             args = defaults
 
-        app = CaptureTheFlag(args, map = 'map10', **kwargs)
+        app = CaptureTheFlag(args, **kwargs)
         if not runner.run(app):
             break
         r = app.reset
@@ -60,15 +60,19 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--console', action='store_true', default=False)
-    parser.add_argument('competitors', nargs='*')
+    parser.add_argument('-c', '--console', action='store_true', default=False,            
+                help='Run the simulation in headless mode without opening a graphical window, logging information to the console instead.')
+    parser.add_argument('-m', '--map', default='map21',
+                help='Specify which level map should be loaded, e.g. map00 or map21.  These are loaded from the .png and .ini file combination in #/assets/.')
+    parser.add_argument('competitors', nargs='*',
+                help='The name of a script and class (e.g. mybot.Placeholder) implementing the Commander interface.  Files are exact, but classes match by substring.')
     args, _ = parser.parse_known_args()
 
     try:
         if args.console:
-            main(platform.ConsoleRunner, args.competitors)
+            main(platform.ConsoleRunner, args.competitors, map=args.map)
         else:
-            main(platform.WindowRunner, args.competitors)
+            main(platform.WindowRunner, args.competitors, map=args.map)
 
     except Exception as e:
         print str(e)

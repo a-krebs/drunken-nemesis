@@ -8,11 +8,25 @@ class Defend(object):
     def __init__(self, botId, facingDirection = None, description = ''):
         super(Defend, self).__init__()
         assert isinstance(botId, str)
-        assert (facingDirection == None) or isinstance(facingDirection, Vector2)
+        assert (facingDirection == None) or isinstance(facingDirection, Vector2) or isinstance(facingDirection, list)
         self.botId = botId
         """
         The name of the bot
         """
+    
+        if facingDirection:
+            # convert the facingDirection into a list of (Vector2, time) pairs
+            if isinstance(facingDirection, Vector2):
+                facingDirection = [(facingDirection, 0.0)]
+            else:
+                # if it is already a list check the type
+                for i,f in enumerate(facingDirection):
+                    if isinstance(f, Vector2):
+                        facingDirection[i] = (f, 0)
+                    else:
+                        # check the type is a type of Vector2, float?
+                        pass
+                    
         self.facingDirection = facingDirection
         """
         The desired facing direction (Vector2) of the bot.
@@ -127,7 +141,7 @@ def toJSON(python_object):
     if isinstance(python_object, Defend):
         command = python_object
         return {'__class__': 'Defend',
-                '__value__': { 'bot': command.botId, 'facingDirection': command.facingDirection, 'description': command.description }}   
+                '__value__': { 'bot': command.botId, 'facingDirections': command.facingDirection, 'description': command.description }}   
 
     if isinstance(python_object, Move):
         command = python_object
@@ -147,12 +161,15 @@ def toJSON(python_object):
     raise TypeError(repr(python_object) + ' is not JSON serializable')
 
 def toVector2List(list):
-    if not list:
-        return None
-
     result = []
-    for i in list:
-        result.append(toVector2(i))
+    for v in list:
+        result.append(toVector2(v))
+    return result
+
+def toPairVector2FloatList(list):
+    result = []
+    for v, f in list:
+        result.append((toVector2(v), f))
     return result
 
 def toVector2(list):
@@ -166,8 +183,8 @@ def fromJSON(dct):
     if '__class__' in dct:
         if dct['__class__'] == 'Defend':
             value = dct['__value__']
-            facingDirection = toVector2(value['facingDirection']) if value['facingDirection'] else None
-            return Defend(value['bot'].encode('utf-8'), facingDirection, description = value['description'].encode('utf-8'))
+            facingDirections = toPairVector2FloatList(value['facingDirections']) if value['facingDirections'] else None
+            return Defend(value['bot'].encode('utf-8'), facingDirections, description = value['description'].encode('utf-8'))
 
         if dct['__class__'] == 'Move':
             value = dct['__value__']

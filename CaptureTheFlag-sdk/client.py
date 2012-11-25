@@ -8,9 +8,10 @@
 #                   and education only.  For details, see the LICENSING file.
 ################################################################################
 
-import bootstrap
-
 import sys
+import os
+print os.getcwd()
+
 from inspect import isclass
 import importlib
 import exceptions
@@ -19,15 +20,10 @@ import socket
 import json
 import gc
 
-from aisbx import platform
-from aisbx import callstack
-
-from game import handshaking
-
 import api
 from api import commands
 from api import gameinfo
-from aigd import Vector2
+from api import handshaking
 
 class DisconnectError(Exception):
     pass
@@ -187,7 +183,7 @@ def main(args):
     args, _ = parser.parse_known_args()
 
     commanderCls = getCommander(args.commander)
-    if commanderCls:
+    if not commanderCls:
         print >> sys.stderr, "Unable to find commander {}".format(args.commander)
         return
 
@@ -209,13 +205,27 @@ def main(args):
         print >> sys.stderr, "Unable to connect to game server at {}:{}".format(HOST, PORT)        
 
 
+from traceback import extract_tb
+
+def format(tb, limit = None):
+    extracted_list = extract_tb(tb)
+    list = []
+    for filename, lineno, name, line in extracted_list:
+        item = '%s(%d): error in %s' % (filename,lineno,name)
+        if line:
+            item = item + '\n\t%s' % line.strip()
+        else:
+            item = item + '.'
+        list.append(item)
+    return list
+
 
 if __name__ == '__main__':
     try:
         main(sys.argv[1:])
     except Exception as e:
         print str(e)
-        tb_list = callstack.format(sys.exc_info()[2])
+        tb_list = format(sys.exc_info()[2])
         for s in tb_list:
             print s
         raise

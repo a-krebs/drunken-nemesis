@@ -76,10 +76,19 @@ class Commander(object):
             try:
                 module = sys.modules[self.__class__.__module__].__file__
                 filename = os.path.join(os.path.dirname(module), 'logs', self.name+'.log')
+
+                dir = os.path.split(filename)[0]
+                if not os.path.isdir(dir):
+                    os.makedirs(dir)
+
                 output = logging.FileHandler(filename)
                 self.log.addHandler(output)
                 self.log.setLevel(logging.DEBUG)
+            except OSError as e:
+                # error making the logging directory
+                pass
             except IOError as e:
+                # error opening the log file
                 pass
 
         self.verbose = False

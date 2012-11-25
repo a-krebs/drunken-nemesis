@@ -7,7 +7,7 @@ import inspect
 # variable.  You can also specify --sbxdir=~/TheAiSandbox on the command
 # line, or use the AISANDBOX_DIR environment variable so it's found
 # automatically for all applications.
-SBX_WORKING_DIR = '../aisbx'
+SBX_WORKING_DIR = None
 
 
 # The binary directory is most often detected automatically from the

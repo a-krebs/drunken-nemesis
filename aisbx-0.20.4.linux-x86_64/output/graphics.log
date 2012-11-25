@@ -1,0 +1,388 @@
+13:26:16: Creating resource group General
+13:26:16: Creating resource group Internal
+13:26:16: Creating resource group Autodetect
+13:26:16: SceneManagerFactory for type 'DefaultSceneManager' registered.
+13:26:16: Registering ResourceManager for type Material
+13:26:16: Registering ResourceManager for type Mesh
+13:26:16: Registering ResourceManager for type Skeleton
+13:26:16: MovableObjectFactory for type 'ParticleSystem' registered.
+13:26:16: OverlayElementFactory for type Panel registered.
+13:26:16: OverlayElementFactory for type BorderPanel registered.
+13:26:16: OverlayElementFactory for type TextArea registered.
+13:26:16: Registering ResourceManager for type Font
+13:26:16: ArchiveFactory for archive type FileSystem registered.
+13:26:16: ArchiveFactory for archive type Zip registered.
+13:26:16: ArchiveFactory for archive type EmbeddedZip registered.
+13:26:16: DDS codec registering
+13:26:16: FreeImage version: 3.15.1
+13:26:16: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+13:26:16: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,3fr,arw,bay,bmq,cap,cine,cr2,crw,cs1,dc2,dcr,drf,dsc,dng,erf,fff,ia,iiq,k25,kc2,kdc,mdc,mef,mos,mrw,nef,nrw,orf,pef,ptx,pxn,qtk,raf,raw,rdc,rw2,rwl,rwz,sr2,srf,sti
+13:26:16: Registering ResourceManager for type HighLevelGpuProgram
+13:26:16: Registering ResourceManager for type Compositor
+13:26:16: MovableObjectFactory for type 'Entity' registered.
+13:26:16: MovableObjectFactory for type 'Light' registered.
+13:26:16: MovableObjectFactory for type 'BillboardSet' registered.
+13:26:16: MovableObjectFactory for type 'ManualObject' registered.
+13:26:16: MovableObjectFactory for type 'BillboardChain' registered.
+13:26:16: MovableObjectFactory for type 'RibbonTrail' registered.
+13:26:16: *-*-* OGRE Initialising
+13:26:16: *-*-* Version 1.8.1 (Byatis)
+13:26:16: Added resource location './assets/' of type 'FileSystem' to resource group 'General'
+13:26:16: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/' of type 'FileSystem' to resource group 'General'
+13:26:16: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/common.pak' of type 'Zip' to resource group 'General'
+13:26:16: Parsing scripts for resource group Autodetect
+13:26:16: Finished parsing scripts for resource group Autodetect
+13:26:16: Creating resources for group Autodetect
+13:26:16: All done
+13:26:16: Parsing scripts for resource group General
+13:26:16: Parsing script console.fontdef
+13:26:16: Finished parsing scripts for resource group General
+13:26:16: Creating resources for group General
+13:26:16: All done
+13:26:16: Parsing scripts for resource group Internal
+13:26:16: Finished parsing scripts for resource group Internal
+13:26:16: Creating resources for group Internal
+13:26:16: All done
+13:26:16: Loading library RenderSystem_GL
+13:26:16: Installing plugin: GL RenderSystem
+13:26:16: OpenGL Rendering Subsystem created.
+13:26:16: Plugin successfully installed
+13:26:16: Loading library RenderSystem_Direct3D9
+13:26:16: OGRE EXCEPTION(7:InternalErrorException): Could not load dynamic library RenderSystem_Direct3D9.  System Error: RenderSystem_Direct3D9.so: cannot open shared object file: No such file or directory in DynLib::load at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreDynLib.cpp (line 93)
+13:26:16: Loading library Plugin_ParticleFX
+13:26:16: Installing plugin: ParticleFX
+13:26:16: Particle Emitter Type 'Point' registered
+13:26:16: Particle Emitter Type 'Box' registered
+13:26:16: Particle Emitter Type 'Ellipsoid' registered
+13:26:16: Particle Emitter Type 'Cylinder' registered
+13:26:16: Particle Emitter Type 'Ring' registered
+13:26:16: Particle Emitter Type 'HollowEllipsoid' registered
+13:26:16: Particle Affector Type 'LinearForce' registered
+13:26:16: Particle Affector Type 'ColourFader' registered
+13:26:16: Particle Affector Type 'ColourFader2' registered
+13:26:16: Particle Affector Type 'ColourImage' registered
+13:26:16: Particle Affector Type 'ColourInterpolator' registered
+13:26:16: Particle Affector Type 'Scaler' registered
+13:26:16: Particle Affector Type 'Rotator' registered
+13:26:16: Particle Affector Type 'DirectionRandomiser' registered
+13:26:16: Particle Affector Type 'DeflectorPlane' registered
+13:26:16: Plugin successfully installed
+13:26:16: OGRE EXCEPTION(6:FileNotFoundException): './config/demos.cfg' file not found! in ConfigFile::load at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreConfigFile.cpp (line 88)
+13:26:16: OGRE EXCEPTION(6:FileNotFoundException): './config/demos.cfg' file not found! in ConfigFile::load at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreConfigFile.cpp (line 88)
+13:26:45: CPU Identifier & Features
+13:26:45: -------------------------
+13:26:45:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz
+13:26:45:  *      SSE: yes
+13:26:45:  *     SSE2: yes
+13:26:45:  *     SSE3: yes
+13:26:45:  *      MMX: yes
+13:26:45:  *   MMXEXT: yes
+13:26:45:  *    3DNOW: no
+13:26:45:  * 3DNOWEXT: no
+13:26:45:  *     CMOV: yes
+13:26:45:  *      TSC: yes
+13:26:45:  *      FPU: yes
+13:26:45:  *      PRO: yes
+13:26:45:  *       HT: no
+13:26:45: -------------------------
+13:26:45: ******************************
+*** Starting GLX Subsystem ***
+******************************
+13:26:45: Registering ResourceManager for type Texture
+13:26:45: GLRenderSystem::_createRenderWindow "The AI Sandbox", 800x600 windowed  miscParams: FSAA=1 colourDepth=32 resolution=800x600 @ 32-bit colour vsync=true 
+13:26:45: GLXWindow::create used FBConfigID = 33
+13:26:45: GL_VERSION = 2.1 Chromium 1.9
+13:26:45: GL_VENDOR = Humper
+13:26:45: GL_RENDERER = Chromium
+13:26:45: GL_EXTENSIONS = GL_EXT_texture_compression_s3tc GL_EXT_draw_range_elements GL_EXT_framebuffer_object GL_EXT_compiled_vertex_array GL_ARB_depth_texture GL_ARB_fragment_program GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_shadow GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_EXT_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_EXT_texture_env_dot3 GL_ARB_texture_mirrored_repeat GL_IBM_texture_mirrored_repeat GL_ATI_texture_mirror_once GL_ARB_texture_non_power_of_two GL_ARB_transpose_matrix GL_ARB_vertex_buffer_object GL_ARB_pixel_buffer_object GL_ARB_vertex_program GL_ARB_window_pos GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_func_separate GL_EXT_blend_subtract GL_EXT_texture_env_add GL_EXT_fog_coord GL_EXT_multi_draw_arrays GL_EXT_secondary_color GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_filter_anisotropic GL_EXT_texture_lod_bias GL_EXT_texture_object GL_EXT_texture3D GL_IBM_rasterpos_clip GL_NV_fog_distance GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_texgen_reflection GL_NV_texture_rectangle GL_ARB_texture_rectangle GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_SGIS_generate_mipmap GL_ARB_shading_language_100 GL_ARB_shader_objects GL_ARB_vertex_shader GL_ARB_fragment_shader GL_EXT_texture_sRGB GL_EXT_framebuffer_blit GL_EXT_blend_equation_separate GL_EXT_stencil_two_side GL_CR_state_parameter GL_CR_cursor_position GL_CR_bounding_box GL_CR_print_string GL_CR_tilesort_info GL_CR_synchronization GL_CR_head_spu_name GL_CR_performance_info GL_CR_window_size GL_CR_tile_info GL_CR_saveframe GL_CR_readback_barrier_size GL_CR_server_id_sharing GL_CR_server_matrix  GL_EXT_stencil_two_side
+13:26:45: Supported GLX extensions: GLX_ARB_multisample GLX_EXT_texture_from_pixmap GLX_SGIX_fbconfig GLX_ARB_get_proc_address
+13:26:45: ***************************
+13:26:45: *** GL Renderer Started ***
+13:26:45: ***************************
+13:26:46: Registering ResourceManager for type GpuProgram
+13:26:46: GLSL support detected
+13:26:46: GL: Using GL_EXT_framebuffer_object for rendering to textures (best)
+13:26:46: FBO PF_UNKNOWN depth/stencil support: D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_L8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_A8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_A4L4 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_BYTE_LA depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_R5G6B5 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_B5G6R5 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:46: FBO PF_A4R4G4B4 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_A1R5G5B5 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_R8G8B8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_B8G8R8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_A8R8G8B8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_B8G8R8A8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_A2R10G10B10 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_A2B10G10R10 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT16_RGB depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT16_RGBA depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT32_RGB depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT32_RGBA depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_X8R8G8B8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_X8B8G8R8 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_SHORT_RGBA depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_R3G3B2 depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT16_R depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT32_R depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT16_GR depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_FLOAT32_GR depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: FBO PF_SHORT_RGB depth/stencil support: D0S0 D16S0 D24S0 D32S0 Packed-D24S8 
+13:26:48: [GL] : Valid FBO targets PF_UNKNOWN PF_L8 PF_A8 PF_A4L4 PF_BYTE_LA PF_R5G6B5 PF_B5G6R5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_B8G8R8A8 PF_A2R10G10B10 PF_A2B10G10R10 PF_FLOAT16_RGB PF_FLOAT16_RGBA PF_FLOAT32_RGB PF_FLOAT32_RGBA PF_X8R8G8B8 PF_X8B8G8R8 PF_SHORT_RGBA PF_R3G3B2 PF_FLOAT16_R PF_FLOAT32_R PF_FLOAT16_GR PF_FLOAT32_GR PF_SHORT_RGB 
+13:26:48: RenderSystem capabilities
+13:26:48: -------------------------
+13:26:48: RenderSystem Name: OpenGL Rendering Subsystem
+13:26:48: GPU Vendor: unknown
+13:26:48: Device Name: Chromium
+13:26:48: Driver Version: 2.1.0.0
+13:26:48:  * Fixed function pipeline: yes
+13:26:48:  * Hardware generation of mipmaps: yes
+13:26:48:  * Texture blending: yes
+13:26:48:  * Anisotropic texture filtering: yes
+13:26:48:  * Dot product texture operation: yes
+13:26:48:  * Cube mapping: yes
+13:26:48:  * Hardware stencil buffer: no
+13:26:48:  * Hardware vertex / index buffers: yes
+13:26:48:  * Vertex programs: yes
+13:26:48:  * Number of floating-point constants for vertex programs: 1024
+13:26:48:  * Number of integer constants for vertex programs: 0
+13:26:48:  * Number of boolean constants for vertex programs: 0
+13:26:48:  * Fragment programs: yes
+13:26:48:  * Number of floating-point constants for fragment programs: 512
+13:26:48:  * Number of integer constants for fragment programs: 0
+13:26:48:  * Number of boolean constants for fragment programs: 0
+13:26:48:  * Geometry programs: no
+13:26:48:  * Number of floating-point constants for geometry programs: 0
+13:26:48:  * Number of integer constants for geometry programs: 0
+13:26:48:  * Number of boolean constants for geometry programs: 0
+13:26:48:  * Supported Shader Profiles: arbfp1 arbvp1 fp30 fp40 glsl vp30 vp40
+13:26:48:  * Texture Compression: yes
+13:26:48:    - DXT: yes
+13:26:48:    - VTC: no
+13:26:48:    - PVRTC: no
+13:26:48:  * Scissor Rectangle: yes
+13:26:48:  * Hardware Occlusion Query: yes
+13:26:48:  * User clip planes: yes
+13:26:48:  * VET_UBYTE4 vertex element type: yes
+13:26:48:  * Infinite far plane projection: yes
+13:26:48:  * Hardware render-to-texture: yes
+13:26:48:  * Floating point textures: no
+13:26:48:  * Non-power-of-two textures: yes
+13:26:48:  * Volume textures: yes
+13:26:48:  * Multiple Render Targets: 8
+13:26:48:    - With different bit depths: yes
+13:26:48:  * Point Sprites: yes
+13:26:48:  * Extended point parameters: yes
+13:26:48:  * Max Point Size: 3.75072e-31
+13:26:48:  * Vertex texture fetch: yes
+13:26:48:  * Number of world matrices: 0
+13:26:48:  * Number of texture units: 32
+13:26:48:  * Stencil buffer depth: 0
+13:26:48:  * Number of vertex blend matrices: 0
+13:26:48:    - Max vertex textures: 32
+13:26:48:    - Vertex textures shared: yes
+13:26:48:  * Render to Vertex Buffer : no
+13:26:48:  * GL 1.5 without VBO workaround: no
+13:26:48:  * Frame Buffer objects: yes
+13:26:48:  * Frame Buffer objects (ARB extension): no
+13:26:48:  * Frame Buffer objects (ATI extension): no
+13:26:48:  * PBuffer support: yes
+13:26:48:  * GL 1.5 without HW-occlusion workaround: no
+13:26:48:  * Separate shader objects: no
+13:26:48: DefaultWorkQueue('Root') initialising.
+13:26:48: Particle Renderer Type 'billboard' registered
+13:26:48: Creating resource group Shaders
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/materials' of type 'FileSystem' to resource group 'Shaders'
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/materials.pak' of type 'Zip' to resource group 'Shaders'
+13:26:48: Added resource location './assets/materials' of type 'FileSystem' to resource group 'Shaders'
+13:26:48: Initialising resource group Shaders
+13:26:48: Parsing scripts for resource group Shaders
+13:26:48: Parsing script blocks.program
+13:26:48: Parsing script color.program
+13:26:48: Parsing script floor.program
+13:26:48: Parsing script background.material
+13:26:48: Parsing script blocks.material
+13:26:48: Parsing script body.material
+13:26:48: Parsing script color.material
+13:26:48: Parsing script console.material
+13:26:48: Parsing script faces.material
+13:26:48: Parsing script floor.material
+13:26:48: Parsing script mouse.material
+13:26:48: Parsing script pixel.material
+13:26:48: Parsing script plane.material
+13:26:48: Parsing script ragdoll.material
+13:26:48: Parsing script splosion.material
+13:26:48: Parsing script vector.material
+13:26:48: Parsing script visualization.material
+13:26:48: Finished parsing scripts for resource group Shaders
+13:26:48: Creating resources for group Shaders
+13:26:48: All done
+13:26:48: Creating resource group Particles
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/particles' of type 'FileSystem' to resource group 'Particles'
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/particles.pak' of type 'Zip' to resource group 'Particles'
+13:26:48: Added resource location './assets/particles' of type 'FileSystem' to resource group 'Particles'
+13:26:48: Initialising resource group Particles
+13:26:48: Parsing scripts for resource group Particles
+13:26:48: Parsing script splosion.particle
+13:26:48: Finished parsing scripts for resource group Particles
+13:26:48: Creating resources for group Particles
+13:26:48: All done
+13:26:48: OverlayElementFactory for type UIPanel registered.
+13:26:48: OverlayElementFactory for type UILabel registered.
+13:26:48: Added resource location './assets/themes/western' of type 'FileSystem' to resource group 'General'
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/themes/western' of type 'FileSystem' to resource group 'General'
+13:26:48: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/western.pak' of type 'Zip' to resource group 'General'
+13:26:49: Skeleton: Loading body.skeleton
+13:26:49: Texture: block_x4.png: Loading 1 faces(PF_R8G8B8,512x512x1) with 9 hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x512x1.
+13:26:49: Texture: block_4m.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:26:49: Texture: block_x2.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) with 9 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x512x1.
+13:26:49: Texture: block_2m.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:26:49: Texture: block_x1.png: Loading 1 faces(PF_R8G8B8,512x512x1) with 9 hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x512x1.
+13:26:49: Texture: block_1m.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:26:49: Texture: slashes_thin.png: Loading 1 faces(PF_A8R8G8B8,16x16x1) with 4 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,16x16x1.
+13:26:49: Creating resource group Overlay
+13:26:49: Added resource location './assets/overlay/' of type 'FileSystem' to resource group 'Overlay'
+13:26:49: Added resource location '/home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/overlay/' of type 'FileSystem' to resource group 'Overlay'
+13:26:49: Initialising resource group Overlay
+13:26:49: Parsing scripts for resource group Overlay
+13:26:49: Finished parsing scripts for resource group Overlay
+13:26:49: Creating resources for group Overlay
+13:26:49: All done
+13:26:49: Failed to load font face from ./assets/fonts/Delicious-Roman.otf.
+13:26:49: Failed to load font face from ./assets/fonts/Delicious-Bold.otf.
+13:26:49: Failed to load font face from ./assets/fonts/Delicious-Italic.otf.
+13:26:49: Failed to load font face from ./assets/fonts/Delicious-BoldItalic.otf.
+13:26:49: Failed to load font face from ./assets/fonts/DroidSans.ttf.
+13:26:49: Failed to load font face from ./assets/fonts/DroidSans-Bold.ttf.
+13:26:49: Unable to open file ./assets/overlay/ctf-sidebar.rml.
+13:26:49: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource invader.tga in resource group Overlay or any other group. in ResourceGroupManager::openResource at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreResourceGroupManager.cpp (line 756)
+13:26:49: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource placeholder.jpg in resource group General or any other group. in ResourceGroupManager::openResource at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreResourceGroupManager.cpp (line 756)
+13:26:49: Failed to load texture from /home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/overlay/invader.tga.
+13:26:49: Unable to open file ./assets/overlay/ctf-splash-screen.rml.
+13:26:49: No font face defined on element #text < h2 < div#header < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < h1 < div#header < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p#help < div#header < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p#help < div#header < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p#help < div#header < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource logo_white.png in resource group Overlay or any other group. in ResourceGroupManager::openResource at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreResourceGroupManager.cpp (line 756)
+13:26:49: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource placeholder.jpg in resource group General or any other group. in ResourceGroupManager::openResource at /home/install/ogre_src_v1-8-1/OgreMain/src/OgreResourceGroupManager.cpp (line 756)
+13:26:49: Failed to load texture from /home/aaron/workspaces/aisandbox/CaptureTheFlag-sdk/assets/logo_white.png.
+13:26:49: Unable to open file ./assets/overlay/ctf-help-screen.rml.
+13:26:49: No font face defined on element #text < h1 < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < b < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: No font face defined on element #text < p < body < #root#default. Please specify a font-family in your RCSS.
+13:26:49: Texture: zone_blue.png: Loading 1 faces(PF_A8R8G8B8,64x64x1) with 6 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x64x1.
+13:26:49: Texture: pixel_box.png: Loading 1 faces(PF_A8R8G8B8,12x12x1) with 3 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,12x12x1.
+13:26:49: Skeleton: Loading character.skeleton
+13:26:49: Mesh: Loading body.mesh.
+13:26:49: Texture: zone_red.png: Loading 1 faces(PF_A8R8G8B8,64x64x1) with 6 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x64x1.
+13:26:49: Font Title using texture size 1024x512
+13:26:49: Info: Freetype returned null for character 160 in font Title
+13:26:49: Texture: TitleTexture: Loading 1 faces(PF_BYTE_LA,1024x512x1) Internal format is PF_BYTE_LA,1024x512x1.
+13:26:49: Font ConsoleBold using texture size 512x256
+13:26:49: Info: Freetype returned null for character 127 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 128 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 129 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 130 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 131 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 132 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 133 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 134 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 135 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 136 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 137 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 138 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 139 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 140 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 141 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 143 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 144 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 145 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 146 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 147 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 148 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 149 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 150 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 151 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 152 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 153 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 154 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 155 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 156 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 157 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 159 in font ConsoleBold
+13:26:49: Info: Freetype returned null for character 160 in font ConsoleBold
+13:26:49: Texture: ConsoleBoldTexture: Loading 1 faces(PF_BYTE_LA,512x256x1) Internal format is PF_BYTE_LA,512x256x1.
+13:26:49: Mesh: Loading flag.mesh.
+13:26:49: Can't assign material _missing_material_ to SubEntity of Mesh2130710771 because this Material does not exist. Have you forgotten to define it in a .material script?
+13:26:49: Can't assign material _missing_material_ to SubEntity of Mesh2130710924 because this Material does not exist. Have you forgotten to define it in a .material script?
+13:26:49: Texture: floor.png: Loading 1 faces(PF_R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:26:49: Texture: base.png: Loading 1 faces(PF_R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:26:49: Texture: pattern.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:26:49: GLSL compiling: Block_PS_glsl
+13:26:49: GLSL compiled:  Ã%
+13:26:49:  Fragment Program:Block_PS_glsl GLSL link result : 
+13:26:49: GLSL compiling: Floor_PS_glsl
+13:26:49: GLSL compiled: Æ%
+13:26:49:  Fragment Program:Floor_PS_glsl GLSL link result : 
+13:26:49: GLSL compiling: CustomColor_VS_glsl
+13:26:49: GLSL compiled: Pâ&
+13:26:49: GLSL compiling: CustomColor_PS_glslPâ&
+13:26:49: GLSL compiled: Pâ&
+13:26:49: Vertex Program:CustomColor_VS_glsl Fragment Program:CustomColor_PS_glsl GLSL link result : 
+13:26:49: GLSL compiling: Body_VS_glsl
+13:26:49: GLSL compiled: °&'
+13:26:49: GLSL compiling: Body_PS_glsl°&'
+13:26:49: GLSL compiled: °&'
+13:26:49: Vertex Program:Body_VS_glsl Fragment Program:Body_PS_glsl GLSL link result : 
+13:26:56: Texture: pixel.png: Loading 1 faces(PF_A8R8G8B8,7x7x1) with 2 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,7x7x1.
+13:27:25: Destroying resource group Overlay
+13:27:25: Unloading resource group Overlay
+13:27:25: Finished unloading resource group Overlay
+13:27:25: DefaultWorkQueue('Root') shutting down.
+13:27:25: *-*-* OGRE Shutdown
+13:27:25: DefaultWorkQueue('Root') shutting down.
+13:27:25: *-*-* OGRE Shutdown
+13:27:25: DefaultWorkQueue('Root') shutting down.
+13:27:25: *-*-* OGRE Shutdown
+13:27:25: Unregistering ResourceManager for type Compositor
+13:27:25: Unregistering ResourceManager for type Font
+13:27:25: Unregistering ResourceManager for type Skeleton
+13:27:25: Unregistering ResourceManager for type Mesh
+13:27:25: Unregistering ResourceManager for type HighLevelGpuProgram
+13:27:25: Uninstalling plugin: ParticleFX
+13:27:25: Plugin successfully uninstalled
+13:27:25: Unloading library Plugin_ParticleFX
+13:27:25: Uninstalling plugin: GL RenderSystem
+13:27:25: Unregistering ResourceManager for type GpuProgram
+13:27:25: ******************************
+*** Stopping GLX Subsystem ***
+******************************
+13:27:25: Unregistering ResourceManager for type Texture
+13:27:25: Plugin successfully uninstalled
+13:27:25: Unloading library RenderSystem_GL
+13:27:25: Unregistering ResourceManager for type Material
+13:27:25: DefaultWorkQueue('Root') shutting down.

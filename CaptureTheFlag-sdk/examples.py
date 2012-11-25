@@ -85,22 +85,20 @@ class DefenderCommander(Commander):
         self.attacker = None
 
     def tick(self):
-        # TODO: When defender is down to the last bot that's attacking the flag, it'll end up ordering
-        # the attacker to run all the way back from the flag to defend!
         if self.attacker and self.attacker.health <= 0:
             self.attacker = None
 
         for bot in self.game.bots_available:
-            if (not self.attacker or self.attacker == bot) and len(self.game.bots_available) > 1:
+            if (not self.attacker or self.attacker == bot or bot.flag) and len(self.game.bots_alive) > 1:
                 self.attacker = bot
 
                 if bot.flag:
-                    #bring it hooome
+                    # Return the flag home relatively quickly!
                     targetLocation = self.game.team.flagScoreLocation
-                    self.issue(commands.Charge, bot, targetLocation, description = 'returning enemy flag!')
+                    self.issue(commands.Move, bot, targetLocation, description = 'returning enemy flag!')
 
                 else:
-                    # find the closest flag that isn't ours
+                    # Find the enemy team's flag position and run to that.
                     enemyFlagLocation = self.game.enemyTeam.flag.position
                     self.issue(commands.Charge, bot, enemyFlagLocation, description = 'getting enemy flag!')
 
@@ -109,22 +107,18 @@ class DefenderCommander(Commander):
                     self.attacker = None
 
                 # defend the flag!
-                targetPosition = self.game.team.flagScoreLocation
+                targetPosition = self.game.team.flag.position
                 targetMin = targetPosition - Vector2(8.0, 8.0)
                 targetMax = targetPosition + Vector2(8.0, 8.0)
-                if bot.flag:
-                    #bring it hooome
-                    targetLocation = self.game.team.flagScoreLocation
-                    self.issue(commands.Charge, bot, targetLocation, description = 'returning enemy flag!')
+
+                if (targetPosition - bot.position).length() > 9.0 and  (targetPosition - bot.position).length() > 3.0 :
+                    while True:
+                        position = self.level.findRandomFreePositionInBox((targetMin,targetMax))
+                        if position and (targetPosition - position).length() > 3.0:
+                            self.issue(commands.Charge, bot, position, description = 'defending around flag')
+                            break
                 else:
-                    if (targetPosition - bot.position).length() > 9.0 and  (targetPosition - bot.position).length() > 3.0 :
-                        while True:
-                            position = self.level.findRandomFreePositionInBox((targetMin,targetMax))
-                            if position and (targetPosition - position).length() > 3.0:
-                                self.issue(commands.Move, bot, position, description = 'defending around flag')
-                                break
-                    else:
-                        self.issue(commands.Defend, bot, (targetPosition - bot.position), description = 'defending facing flag')
+                    self.issue(commands.Defend, bot, (targetPosition - bot.position), description = 'defending facing flag')
 
 
 class BalancedCommander(Commander):
@@ -177,7 +171,6 @@ class BalancedCommander(Commander):
                     self.issue(commands.Defend, self.defender, (self.middle - bot.position), description = 'turning to defend')
 
             elif self.attacker == None or self.attacker == bot or bot.flag:
-                # Our attacking bot
                 self.attacker = bot
 
                 if bot.flag:
