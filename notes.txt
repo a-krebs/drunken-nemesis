@@ -1,0 +1,55 @@
+ON VIDEOCAST FROM SUNDAY NOV 25
+
+attack wins 2bots vs 1 defend, wins 1-1 vs defend command
+
+think about risk areas of map, where bots are sent
+
+---Gameplay Statistics---
+Travel maps (heatmap of where bots are located most often)
+deathmaps (apply blur filter to make them less discrete)
+similar to blur, scaling down (lowering resolution) can turn fine data into coarse data (incleased bucket size)
+
+use array storage numpy and scipy
+image manipulation from PIL, ImageMagick
+
+Katz's Algorithm for Centrality (mixed results)
+maybe apply weights to graph to give Katz's Algorithm more context as to what is important to gameply
+
+Pagerank algorithm (in numpy) can show proximity to obstacle (shows in-corners clearly; could be used for cover)
+
+Betweeness
+
+Max-flow Min-cut for multiple paths
+
+Voronoi Maps to find major areas (and major paths)
+These are more representative, conceptually, of the map structure. Better for strategy
+
+Process for Voronoi maps:
+
+clearance: distance from obstacle; distance transfor (scipy)
+gives gradient from obstacle
+
+convex obstacles (distance from center of obstacle to edge)
+
+apply watershed algorithm (which areas are part of the same basin)
+
+also visualize borders of images
+
+where borders of 3 basins meet, add a waypoint (also add waypoints in between long distances)
+
+from this, build digraph of paths
+
+you can then weight this by centrality or proximity to target or something
+
+build a spanning tree outward from your squad or base
+
+weight these paths (corridor map representation) by risk, or by frequency of use, or by how wide the paths are
+
+numpy, scipy, mahotas (for calculating borders), matplotlib, graph-tool
+
+approx 150 lines including shorest-path stuff
+
+check into leapfrogging within squad
+
+http://www.staff.science.uu.nl/~garae101
+                               ~overm101
