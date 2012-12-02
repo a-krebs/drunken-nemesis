@@ -11,30 +11,90 @@ from api import commands
 from api import Vector2
 
 
-class PlaceholderCommander(Commander):
+class CustomCommander(Commander):
     """
-    Rename and modify this class to create your own commander and add mycmd.Placeholder
-    to the execution command you use to run the competition.
+    This is currently a copy of BalancedCommand from examples.py
+    I'm going to modify it to do some high-level pathfinding and map analysis
     """
 
     def initialize(self):
-        """Use this function to setup your bot before the game starts."""
-        self.verbose = True    # display the command descriptions next to the bot labels
+        self.attacker = None
+        self.defender = None
+        self.verbose = False
 
+        # Calculate flag positions and store the middle.
+        ours = self.game.team.flag.position
+        theirs = self.game.enemyTeam.flag.position
+        self.middle = (theirs + ours) / 2.0
+
+        # Now figure out the flaking directions, assumed perpendicular.
+        d = (ours - theirs)
+        self.left = Vector2(-d.y, d.x).normalized()
+        self.right = Vector2(d.y, -d.x).normalized()
+        self.front = Vector2(d.x, d.y).normalized()
+
+
+    # Add the tick function, called each update
+    # This is where you can do any logic and issue new orders.
     def tick(self):
-        """Override this function for your own bots.  Here you can access all the information in self.game,
-        which includes game information, and self.level which includes information about the level."""
 
-        # for all bots which aren't currently doing anything
-        for bot in self.game.bots_available:
-            if bot.flag:
-                # if a bot has the flag run to the scoring location
-                flagScoreLocation = self.game.team.flagScoreLocation
-                self.issue(commands.Charge, bot, flagScoreLocation, description = 'Run to my flag')
+        if self.attacker and self.attacker.health <= 0:
+            # the attacker is dead we'll pick another when available
+            self.attacker = None
+
+        if self.defender and (self.defender.health <= 0 or self.defender.flag):
+            # the defender is dead we'll pick another when available
+            self.defender = None
+
+        # In this example we loop through all living bots without orders (self.game.bots_available)
+        # All other bots will wander randomly
+        for bot in self.game.bots_available:           
+            if (self.defender == None or self.defender == bot) and not bot.flag:
+                self.defender = bot
+
+                # Stand on a random position in a box of 4m around the flag.
+                targetPosition = self.game.team.flagScoreLocation
+                targetMin = targetPosition - Vector2(2.0, 2.0)
+                targetMax = targetPosition + Vector2(2.0, 2.0)
+                goal = self.level.findRandomFreePositionInBox([targetMin, targetMax])
+                
+                if (goal - bot.position).length() > 8.0:
+                    self.issue(commands.Charge, self.defender, goal, description = 'running to defend')
+                else:
+                    self.issue(commands.Defend, self.defender, (self.middle - bot.position), description = 'turning to defend')
+
+            elif self.attacker == None or self.attacker == bot or bot.flag:
+                self.attacker = bot
+
+                if bot.flag:
+                    # Tell the flag carrier to run home!
+                    target = self.game.team.flagScoreLocation
+                    self.issue(commands.Move, bot, target, description = 'running home')
+                else:
+                    target = self.game.enemyTeam.flag.position
+                    flank = self.getFlankingPosition(bot, target)
+                    if (target - flank).length() > (bot.position - target).length():
+                        self.issue(commands.Attack, bot, target, description = 'attack from flank', lookAt=target)
+                    else:
+                        flank = self.level.findNearestFreePosition(flank)
+                        self.issue(commands.Move, bot, flank, description = 'running to flank')
+
             else:
-                # otherwise run to where the flag is
-                enemyFlag = self.game.enemyTeam.flag.position
-                self.issue(commands.Charge, bot, enemyFlag, description = 'Run to enemy flag')
+                # All our other (random) bots
+
+                # pick a random position in the level to move to                               
+                halfBox = 0.4 * min(self.level.width, self.level.height) * Vector2(1, 1)
+                
+                target = self.level.findRandomFreePositionInBox((self.middle + halfBox, self.middle - halfBox))
+
+                # issue the order
+                if target:
+                    self.issue(commands.Attack, bot, target, description = 'random patrol')
+
+    def getFlankingPosition(self, bot, target):
+        flanks = [target + f * 16.0 for f in [self.left, self.right]]
+        options = map(lambda f: self.level.findNearestFreePosition(f), flanks)
+        return sorted(options, key = lambda p: (bot.position - p).length())[0]
 
     def shutdown(self):
         """Use this function to teardown your bot after the game is over, or perform an
