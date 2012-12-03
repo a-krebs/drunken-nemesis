@@ -12,7 +12,9 @@ from api import Vector2
 
 import PIL
 import numpy
-from PIL import Image
+from scipy.ndimage.morphology import distance_transform_edt, distance_transform_cdt
+from scipy import misc
+from PIL import Image, ImageOps
 
 class DrunkenNemesis(Commander):
     """
@@ -22,13 +24,25 @@ class DrunkenNemesis(Commander):
 
     def initialize(self):
         # save the map to file
-        data = self.level.blockHeights
-        data = numpy.multiply(32, data)
-        print data
+        data = numpy.multiply(255, self.level.blockHeights)
         arr = numpy.array(data, dtype = 'byte')
         img = PIL.Image.fromarray(arr, mode = "L")
         img.save('/home/aaron/workspaces/aisandbox/map.png')
         
+        # invert map and save to file
+        img_invert = PIL.ImageOps.invert(img)
+        img_invert.save('/home/aaron/workspaces/aisandbox/inverted_map.png')
+        
+        # take inverted image back to array
+        # TODO: invert the array properly later
+        data_invert = numpy.asarray(img_invert)
+                
+        arr = distance_transform_edt(data_invert)
+        print arr
+        img = PIL.Image.fromarray(arr, "L")
+        img.save('/home/aaron/workspaces/aisandbox/edt_map.png')
+        
+        # set BalancedCommander default stuff
         self.attacker = None
         self.defender = None
         self.verbose = False
