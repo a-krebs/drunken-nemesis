@@ -26,6 +26,8 @@ class DrunkenNemesis(Commander):
         # save the map to file
         data = numpy.multiply(255, self.level.blockHeights)
         arr = numpy.array(data, dtype = 'byte')
+        #print arr
+        print arr.dtype
         img = PIL.Image.fromarray(arr, mode = "L")
         img.save('/home/aaron/workspaces/aisandbox/map.png')
         
@@ -33,13 +35,28 @@ class DrunkenNemesis(Commander):
         img_invert = PIL.ImageOps.invert(img)
         img_invert.save('/home/aaron/workspaces/aisandbox/inverted_map.png')
         
+        # perform distance transform on obstacles
+        arr_obst = distance_transform_edt(numpy.asarray(img.convert('F')))
+        
+        
+        # save obstacle distance transform
+        img = PIL.Image.fromarray(numpy.multiply(32, arr_obst.astype(numpy.byte)))
+        img = img.convert('1')
+        img.save('/home/aaron/workspaces/aisandbox/edt_obstacle.png')
+        
         # take inverted image back to array
-        # TODO: invert the array properly later
-        data_invert = numpy.asarray(img_invert)
-                
-        arr = distance_transform_edt(data_invert)
-        print arr
-        img = PIL.Image.fromarray(arr, "L")
+        data_invert = numpy.asarray(img_invert.convert('F'))
+        print data_invert.dtype
+        #print data_invert.shape
+        # perform transform
+        arr_dist = distance_transform_edt(data_invert)
+        #for row in arr_dist:
+        #    print row
+        #    print len(row)
+        #print arr_dist.shape
+        print numpy.multiply(64, arr_dist.astype(numpy.byte))
+        img = PIL.Image.fromarray(numpy.multiply(64, arr_dist.astype(numpy.byte)))
+        img = img.convert('L')
         img.save('/home/aaron/workspaces/aisandbox/edt_map.png')
         
         # set BalancedCommander default stuff
