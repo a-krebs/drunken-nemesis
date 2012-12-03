@@ -14,7 +14,7 @@ import PIL
 import numpy
 from PIL import Image
 
-class CustomCommander(Commander):
+class DrunkenNemesis(Commander):
     """
     This is currently a copy of BalancedCommand from examples.py
     I'm going to modify it to do some high-level pathfinding and map analysis
