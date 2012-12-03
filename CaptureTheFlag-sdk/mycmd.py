@@ -10,6 +10,9 @@ from api import commands
 # effectively be considered 2D.
 from api import Vector2
 
+import PIL
+import numpy
+from PIL import Image
 
 class CustomCommander(Commander):
     """
@@ -18,6 +21,14 @@ class CustomCommander(Commander):
     """
 
     def initialize(self):
+        # save the map to file
+        data = self.level.blockHeights
+        data = numpy.multiply(32, data)
+        print data
+        arr = numpy.array(data, dtype = 'byte')
+        img = PIL.Image.fromarray(arr, mode = "L")
+        img.save('/home/aaron/workspaces/aisandbox/map.png')
+        
         self.attacker = None
         self.defender = None
         self.verbose = False
