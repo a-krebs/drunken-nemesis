@@ -56,7 +56,7 @@ class DrunkenNemesis(Commander):
         #    print len(row)
         #print arr_dist.shape
         print numpy.multiply(64, arr_dist.astype(numpy.byte))
-        img = PIL.Image.fromarray(numpy.multiply(64, arr_dist.astype(numpy.byte)))
+        img = PIL.Image.fromarray(numpy.multiply(40, arr_dist.astype(numpy.int32)))
         img = img.convert('L')
         img.save('/home/aaron/workspaces/aisandbox/edt_map.png')
         
