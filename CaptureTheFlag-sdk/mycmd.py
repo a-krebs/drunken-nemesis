@@ -40,12 +40,13 @@ class DrunkenNemesis(Commander):
         
         
         # save obstacle distance transform
-        img = PIL.Image.fromarray(numpy.multiply(32, arr_obst.astype(numpy.byte)))
-        img = img.convert('1')
-        img.save('/home/aaron/workspaces/aisandbox/edt_obstacle.png')
+        img_obst = PIL.Image.fromarray(numpy.multiply(100, arr_obst.astype(numpy.byte)))
+        img_obst = PIL.ImageOps.invert(img_obst.convert('L'))
+        img_obst = img_obst.convert('1')
+        img_obst.save('/home/aaron/workspaces/aisandbox/edt_obstacle.png')
         
         # take inverted image back to array
-        data_invert = numpy.asarray(img_invert.convert('F'))
+        data_invert = numpy.asarray(img_obst.convert('F'))
         print data_invert.dtype
         #print data_invert.shape
         # perform transform
